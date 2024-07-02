@@ -6,19 +6,19 @@ on:
       name:
         type: string
         description: "repo name"
-        required: true
+        required: false
       organization:
         type: string
         description: "organization name"
-        required: true
+        required: false
       package1:
         type: string
         description: "package name"
-        required: true
+        required: false
       package2:
         type: string
         description: "package name"
-        required: true
+        required: false
 
 permissions:
   contents: "read"
@@ -56,7 +56,7 @@ jobs:
 
       - name: create project
         run: |
-          g8 https://github.com/yzhang27/test-g8.g8 --name=${{ inputs.name }} --package1=${{ inputs.package1 }} --package2=${{ inputs.package2 }}
+          g8 https://github.com/yzhang27/test-g8.g8 --name=test-g8 --package1=test-package1 --package2=test-package2 -o test-workflow
 
       - name: show files
         run: |
