@@ -42,6 +42,13 @@ jobs:
       - name: current directory
         run: ls "${{ github.workspace }}"
 
+      - name: Clone repository
+        uses: GuillaumeFalourd/clone-github-repo-action@v2.3
+        with:
+          owner: 'yzhang27'
+          repository: 'test-workflow'
+          access-token: ${{ secrets.AUTH_TOKEN }}
+
       - uses: actions/setup-java@v4
         with:
           distribution: adopt
