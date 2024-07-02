@@ -61,5 +61,13 @@ jobs:
       - name: show files
         run: |
           ls "${{ github.workspace }}"
-          cd ${{ inputs.name }}
+          cd test-workflow
           ls
+
+      - name: push files
+        run: |
+          cd test-workflow
+          ls
+          git add .
+          git commit -m 'add files generated from g8'
+          git push
