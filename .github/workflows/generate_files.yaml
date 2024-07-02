@@ -34,6 +34,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: coursier/cache-action@v6
 
+      - name: install g8
+        run: cs install giter8
+
       - name: current directory
         run: ls "${{ github.workspace }}"
 
@@ -44,7 +47,7 @@ jobs:
 
       - name: create project
         run: |
-          sbt 'new scala/scala-seed.g8'
+          g8 unfiltered/unfiltered.g8
 
       - name: show files
         run: ls "${{ github.workspace }}"
