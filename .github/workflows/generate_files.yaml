@@ -46,5 +46,5 @@ jobs:
         run: |
           sbt 'new scala/scala-seed.g8'
 
-       - name: show files
+      - name: show files
         run: ls "${{ github.workspace }}"
