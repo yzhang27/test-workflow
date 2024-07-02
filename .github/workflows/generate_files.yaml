@@ -68,6 +68,8 @@ jobs:
         run: |
           cd test-workflow
           ls
+          git config --global user.name yzhang27
+          git config --global user.email yzhang1027@gmail.com
           git add .
           git commit -m 'add files generated from g8'
           git push
