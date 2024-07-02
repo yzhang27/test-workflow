@@ -48,7 +48,7 @@ jobs:
 
       - name: create project
         run: |
-          g8 unfiltered/unfiltered.g8
+          g8 unfiltered/unfiltered.g8 --name=name --version=0.1.0-SNAPSHOT --scala_version=scala_version --sbt_version=sbt_version  --unfiltered_version=unfiltered_version  --description=description
 
       - name: show files
         run: ls "${{ github.workspace }}"
